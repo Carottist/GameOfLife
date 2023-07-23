@@ -1,0 +1,15 @@
+C:\GameOfLife\bin\Debug\net7.0\GameOfLife.exe
+C:\GameOfLife\bin\Debug\net7.0\GameOfLife.deps.json
+C:\GameOfLife\bin\Debug\net7.0\GameOfLife.runtimeconfig.json
+C:\GameOfLife\bin\Debug\net7.0\GameOfLife.dll
+C:\GameOfLife\bin\Debug\net7.0\GameOfLife.pdb
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.csproj.AssemblyReference.cache
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.GeneratedMSBuildEditorConfig.editorconfig
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.AssemblyInfoInputs.cache
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.AssemblyInfo.cs
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.csproj.CoreCompileInputs.cache
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.dll
+C:\GameOfLife\obj\Debug\net7.0\refint\GameOfLife.dll
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.pdb
+C:\GameOfLife\obj\Debug\net7.0\GameOfLife.genruntimeconfig.cache
+C:\GameOfLife\obj\Debug\net7.0\ref\GameOfLife.dll
