@@ -5,6 +5,10 @@ public class Grid
     private int columns;
     private NeighborMode neighborMode;
 
+    //getters for rows and columns
+    public int Rows { get { return rows; } }
+    public int Columns { get { return columns; } }
+
     public Grid(int rows, int columns, NeighborMode neighborMode)
     {
         this.rows = rows;
@@ -99,16 +103,43 @@ public class Grid
         }
     }
 
-    public void Render()
+    public void Render(GameMode gameMode)
     {
-        // Render the grid to the console
-        for (int y = 0; y < rows; y++)
+        // Clear the console
+        Console.Clear();
+
+        if (gameMode == GameMode.Running || gameMode == GameMode.Paused)
         {
-            for (int x = 0; x < columns; x++)
+            // Render the grid to the console
+            for (int y = 0; y < rows; y++)
             {
-                Console.Write(cells[y, x].IsAlive ? "*" : " ");
+                for (int x = 0; x < columns; x++)
+                {
+                    Console.Write(cells[y, x].IsAlive ? "*" : " ");
+                }
+                Console.WriteLine();
             }
-            Console.WriteLine();
+        }
+
+        //if game mode is carriage, render the carriage as well
+        if (gameMode == GameMode.Carriage)
+        {
+            // Render the grid to the console
+            for (int y = 0; y < rows; y++)
+            {
+                for (int x = 0; x < columns; x++)
+                {
+                    if (Carriage.Instance.X == x && Carriage.Instance.Y == y)
+                    {
+                        Console.Write("#");
+                    }
+                    else
+                    {
+                        Console.Write(cells[y, x].IsAlive ? "o" : " ");
+                    }
+                }
+                Console.WriteLine();
+            }
         }
     }
     
@@ -120,6 +151,17 @@ public class Grid
         {
             cells[y, x].IsAlive = isAlive;
         }
+    }
+
+    public bool GetCellState(int x, int y)
+    {
+        // Get the state (alive or dead) of a cell at specific coordinates (x, y)
+        // Note: Ensure that the coordinates are within the grid boundaries
+        if (x >= 0 && x < columns && y >= 0 && y < rows)
+        {
+            return cells[y, x].IsAlive;
+        }
+        return false;
     }
 
    
